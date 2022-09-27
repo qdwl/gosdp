@@ -114,6 +114,14 @@ func (s *SessionDescription) Marshal() ([]byte, error) {
 		for _, a := range md.Attributes {
 			m.addKeyValue("a=", a.String())
 		}
+
+		if md.GB28181SSRC != nil {
+			m.addKeyValue("y=", md.GB28181SSRC.String())
+		}
+	}
+
+	if s.GB28181Format != nil {
+		m.addKeyValue("f=", s.GB28181Format.String())
 	}
 
 	return m.bytes(), nil

@@ -33,6 +33,9 @@ type MediaDescription struct {
 	// a=<attribute>:<value>
 	// https://tools.ietf.org/html/rfc4566#section-5.13
 	Attributes []Attribute
+
+	// y=<ssrc>
+	GB28181SSRC *GB28181SSRC
 }
 
 // Attribute returns the value of an attribute and if it exists

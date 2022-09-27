@@ -65,6 +65,9 @@ type SessionDescription struct {
 
 	// https://tools.ietf.org/html/rfc4566#section-5.14
 	MediaDescriptions []*MediaDescription
+
+	// f=<format>
+	GB28181Format *GB28181Format
 }
 
 // Attribute returns the value of an attribute and if it exists
